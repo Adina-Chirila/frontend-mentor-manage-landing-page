@@ -1,13 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
-/* .attribution {
-	font-size: 11px;
-	text-align: center;
+body {
+	font-family: "Be Vietnam", sans-serif;
+	background: no-repeat top -250px right -190px
+		url("./images/bg-tablet-pattern.svg");
 }
+
+.container {
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/********************************* NAV BAR *********************/
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3em 0;
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.list-item + .list-item {
+	margin-left: 1.5em;
+}
+
+.list-item a {
+	text-decoration: none;
+	color: hsl(228, 39%, 23%);
+	font-weight: 700;
+}
+
+.list-item a:hover {
+	color: hsl(227, 12%, 61%);
+	cursor: pointer;
+}
+
+.cta {
+	cursor: pointer;
+	background-color: hsl(12, 88%, 59%);
+	color: white;
+	border: none;
+	outline: none;
+	font-family: inherit;
+	padding: 0.8em 2.5em;
+	border-radius: 2em;
+	font-weight: 700;
+	box-shadow: 0px 17px 22px -14px rgba(242, 95, 58, 0.75);
+	-webkit-box-shadow: 0px 17px 22px -14px rgba(242, 95, 58, 0.75);
+	-moz-box-shadow: 0px 17px 22px -14px rgba(242, 95, 58, 0.75);
+}
+
+.cta:hover {
+	background-color: hsl(12, 97%, 71%);
+}
+
+/********************************* INTRO SECTION *********************/
+
+.intro {
+	display: flex;
+	justify-self: center;
+	align-items: center;
+}
+
+.main-heading {
+	color: hsl(228, 39%, 23%);
+	font-size: 3rem;
+	line-height: 1.2;
+}
+
+.intro .content {
+	width: 73%;
+}
+
+.content {
+	margin: 1em 0;
+	color: hsl(227, 12%, 61%);
+}
+
+.cta-text,
+.graphs {
+	flex: 1;
+}
+
+.graphs img {
+	max-width: 100%;
+}
+
+/**************************** WHAT'S DIFFERENT SECTION *********************/
+
+.different::before {
+	position: absolute;
+	content: "";
+	background: url("./images/bg-tablet-pattern.svg") no-repeat;
+	background-size: 800px;
+	width: 820px;
+	height: 800px;
+	top: 250px;
+	left: -550px;
+	z-index: -1;
+}
+
+.different {
+	margin-top: 3em;
+	display: flex;
+	position: relative;
+}
+
+.different-left,
+.different-right {
+	flex: 1;
+}
+
+.heading {
+	font-size: 2rem;
+	color: hsl(228, 39%, 23%);
+	line-height: 1.2;
+}
+
+.box {
+	display: flex;
+	align-items: flex-start;
+}
+
+.box-title {
+	color: hsl(228, 39%, 23%);
+}
+
+.box-number {
+	background-color: hsl(12, 88%, 59%);
+	color: white;
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	padding: 0.5em 1.5em;
+	border-radius: 2em;
+	font-size: 0.8rem;
+	margin-right: 1.5em;
+}
+
+/****************************** TESTIMONIALS SECTION *********************/
+
+.testimonials-section {
+	text-align: center;
+	margin: 6em 0;
+	padding: 0 1em;
+}
+
+.testimonials-container {
+	margin: 5em 0 2em 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.testimonial {
+	background-color: hsl(0, 0%, 98%);
+	position: relative;
+}
+
+.testimonial + .testimonial {
+	margin-left: 1em;
+}
+
+.testimonial img {
+	width: 60px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.testimonial .name {
+	margin-top: 3.5em;
+	color: hsl(228, 39%, 23%);
+	font-weight: 700;
+}
+
+.testimonial .content {
+	font-size: 0.8rem;
+}
+
+/********************************* CTA SECTION *********************/
+.cta-banner {
+	background: left bottom url("./images/bg-simplify-section-desktop.svg");
+	background-color: hsl(12, 88%, 59%);
+}
+
+.cta-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3em 0;
+}
+
+.heading-inverted {
+	color: white;
+	width: 50%;
+	line-height: 1.2;
+}
+
+.cta-inverted {
+	background-color: white;
+	color: hsl(12, 88%, 59%);
+	box-shadow: 0px 17px 22px -14px rgba(14, 14, 14, 0.75);
+	-webkit-box-shadow: 0px 17px 22px -14px rgba(14, 14, 14, 0.75);
+	-moz-box-shadow: 0px 17px 22px -14px rgba(14, 14, 14, 0.75);
+}
+
+.cta-inverted:hover {
+	color: hsl(12, 97%, 71%);
+	background-color: white;
+}
+
+/********************************* FOOTER ***************************/
+
+footer {
+	background-color: hsl(233, 12%, 13%);
+}
+
+footer .container {
+	display: flex;
+	padding: 3em 0;
+	justify-content: space-between;
+}
+
+.social-media {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.social-media-icons {
+	color: white;
+	cursor: pointer;
+}
+
+.social-media-icons i {
+	margin-right: 1em;
+}
+
+.social-media-icons i:hover,
+.nav-bar-bottom .list .list-item a:hover {
+	color: hsl(12, 88%, 59%);
+}
+
+.svg-logo {
+	fill: white;
+}
+
+.nav-bar-bottom {
+	flex: 2;
+	display: flex;
+	margin-left: 1.5em;
+}
+
+.nav-bar-bottom .list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0;
+	width: 50%;
+}
+
+.nav-bar-bottom .first-list {
+	justify-content: space-between;
+}
+
+.nav-bar-bottom .list a {
+	color: white;
+	font-weight: 400;
+}
+
+.nav-bar-bottom .list .list-item {
+	font-size: 0.8rem;
+	margin: 0 0 1em 0;
+}
+
+.nav-bar-bottom .list .list-item:last-child {
+	margin-bottom: 0;
+}
+
+.newsletter {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.copyright,
+.challenge {
+	font-size: 0.7rem;
+}
+
+.attribution {
+	text-align: right;
+}
+
+.attribution,
 .attribution a {
-	color: hsl(228, 45%, 44%);
-} */
+	color: hsl(227, 12%, 61%);
+}
+
+.subscribe {
+	border: none;
+	outline: none;
+	padding: 0.5em 1.2em;
+	border-radius: 2em;
+	font-family: inherit;
+	color: hsl(12, 88%, 59%);
+}
+
+.subscribe-btn {
+	margin-left: 0.5em;
+	padding: 0.5em 1.2em;
+}
