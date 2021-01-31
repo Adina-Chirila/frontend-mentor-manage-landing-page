@@ -16,15 +16,20 @@ body {
 	width: 90%;
 	max-width: 900px;
 	margin: 0 auto;
+	position: relative;
 }
 
-/********************************* NAV BAR *********************/
+/********************************* HEADER *********************/
 
 header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 3em 0;
+}
+
+.burger-menu {
+	display: none;
 }
 
 .list {
@@ -85,6 +90,10 @@ header {
 	width: 73%;
 }
 
+.box-content {
+	padding-left: 3em;
+}
+
 .content {
 	margin: 1em 0;
 	color: hsl(227, 12%, 61%);
@@ -114,7 +123,7 @@ header {
 }
 
 .different {
-	margin-top: 3em;
+	margin-top: 2em;
 	display: flex;
 	position: relative;
 }
@@ -130,16 +139,20 @@ header {
 	line-height: 1.2;
 }
 
-.box {
-	display: flex;
-	align-items: flex-start;
-}
-
 .box-title {
+	font-size: 0.9rem;
 	color: hsl(228, 39%, 23%);
 }
 
 .box-number {
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	border-radius: 2em;
+	font-size: 0.8rem;
+}
+
+.number {
 	background-color: hsl(12, 88%, 59%);
 	color: white;
 	display: flex;
@@ -149,6 +162,7 @@ header {
 	border-radius: 2em;
 	font-size: 0.8rem;
 	margin-right: 1.5em;
+	font-weight: 700;
 }
 
 /****************************** TESTIMONIALS SECTION *********************/
@@ -231,7 +245,7 @@ footer {
 	background-color: hsl(233, 12%, 13%);
 }
 
-footer .container {
+.flex-footer {
 	display: flex;
 	padding: 3em 0;
 	justify-content: space-between;
@@ -294,26 +308,26 @@ footer .container {
 	margin-bottom: 0;
 }
 
-.newsletter {
-	flex: 2;
+.copyright,
+.challenge {
+	font-size: 0.7rem;
+	padding: 0.2em 0;
+}
+
+.attribution {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-end;
 }
 
 .copyright,
 .challenge {
-	font-size: 0.7rem;
-}
-
-.attribution {
-	text-align: right;
-}
-
-.attribution,
-.attribution a {
 	color: hsl(227, 12%, 61%);
+}
+
+.challenge a {
+	color: hsl(12, 88%, 59%);
 }
 
 .subscribe {
@@ -328,4 +342,140 @@ footer .container {
 .subscribe-btn {
 	margin-left: 0.5em;
 	padding: 0.5em 1.2em;
+}
+
+/****************************** MEDIA QUERIES ************************/
+
+@media only screen and (max-width: 900px) {
+	.identity {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.burger-menu {
+		display: block;
+		cursor: pointer;
+	}
+
+	.nav-bar .list {
+		position: absolute;
+		flex-direction: column;
+		background-color: white;
+		width: 100%;
+		top: 7em;
+		right: 0;
+		padding: 1.6em 0;
+		display: none;
+	}
+
+	.visible {
+		display: flex;
+	}
+
+	.nav-bar .list .list-item {
+		margin: 0 0 1.6em 0;
+	}
+
+	.cta-header {
+		display: none;
+	}
+
+	.intro {
+		flex-direction: column-reverse;
+	}
+
+	.main-heading {
+		font-size: 2rem;
+	}
+
+	.cta-text {
+		text-align: center;
+	}
+
+	.intro .content {
+		width: 100%;
+	}
+
+	.different {
+		flex-direction: column;
+	}
+
+	.different::before {
+		background: none;
+	}
+
+	.different-left {
+		text-align: center;
+		margin: 3em 0;
+	}
+
+	.box-number {
+		background-color: hsl(13, 100%, 96%);
+	}
+
+	.testimonials-section {
+		margin-bottom: 3em;
+	}
+
+	.testimonials-container {
+		flex-direction: column;
+	}
+
+	.testimonial + .testimonial {
+		margin-left: 0;
+	}
+
+	.testimonial {
+		margin-bottom: 4em;
+	}
+
+	.cta-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.heading-inverted {
+		width: 100%;
+	}
+
+	.cta-inverted {
+		margin-top: 2em;
+	}
+
+	.flex-footer {
+		flex-direction: column-reverse;
+	}
+
+	.newsletter {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 3em;
+	}
+
+	.nav-bar-bottom {
+		margin: 0 0 3em 0;
+	}
+
+	.social-media {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.social-media-icons {
+		width: 100%;
+		margin-bottom: 2em;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.social-media-icons i {
+		font-size: 1.8rem;
+		margin: 0;
+	}
 }
