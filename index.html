@@ -14,6 +14,7 @@
 			crossorigin="anonymous"
 		></script>
 		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
 		<title>Frontend Mentor | Manage landing page</title>
 	</head>
 	<body>
@@ -212,12 +213,13 @@
 				<div class="newsletter">
 					<form>
 						<input
-							type="email"
+							type="text"
 							class="subscribe"
 							placeholder="Updates in your inbox…"
 						/>
-						<button class="cta subscribe-btn">Go</button>
+						<button class="cta subscribe-btn" type="submit">Go</button>
 					</form>
+					<div class="subscribe-message"></div>
 				</div>
 			</div>
 			<div class="attribution">

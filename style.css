@@ -330,6 +330,14 @@ footer {
 	color: hsl(12, 88%, 59%);
 }
 
+.newsletter {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 3em;
+}
+
 .subscribe {
 	border: none;
 	outline: none;
@@ -339,9 +347,22 @@ footer {
 	color: hsl(12, 88%, 59%);
 }
 
+.subscribe-error-border {
+	border: 1px solid hsl(12, 88%, 59%);
+}
+
 .subscribe-btn {
 	margin-left: 0.5em;
 	padding: 0.5em 1.2em;
+}
+
+.subscribe-message {
+	color: hsl(12, 88%, 59%);
+	font-style: italic;
+	font-size: 0.6rem;
+	margin-top: 1em;
+	letter-spacing: 1px;
+	width: 100%;
 }
 
 /****************************** MEDIA QUERIES ************************/
@@ -354,9 +375,29 @@ footer {
 		align-items: center;
 	}
 
+	.backdrop {
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(
+			to bottom,
+			#b6b6b7,
+			#858586,
+			#575757,
+			#2d2d2d,
+			#000000
+		);
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 0.6;
+		z-index: 10;
+		display: none;
+	}
+
 	.burger-menu {
 		display: block;
 		cursor: pointer;
+		z-index: 100;
 	}
 
 	.nav-bar .list {
@@ -367,11 +408,19 @@ footer {
 		top: 7em;
 		right: 0;
 		padding: 1.6em 0;
+		z-index: 100;
 		display: none;
 	}
 
-	.visible {
+	.backdrop.visible {
+		display: block;
+	}
+
+	.nav-bar .list.visible {
 		display: flex;
+		-webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+			both;
+		animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 	}
 
 	.nav-bar .list .list-item {
@@ -450,13 +499,6 @@ footer {
 		flex-direction: column-reverse;
 	}
 
-	.newsletter {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 3em;
-	}
-
 	.nav-bar-bottom {
 		margin: 0 0 3em 0;
 	}
@@ -477,5 +519,33 @@ footer {
 	.social-media-icons i {
 		font-size: 1.8rem;
 		margin: 0;
+	}
+	.subscribe-message {
+		width: 40%;
+	}
+}
+
+@-webkit-keyframes scale-in-center {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes scale-in-center {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
 	}
 }
