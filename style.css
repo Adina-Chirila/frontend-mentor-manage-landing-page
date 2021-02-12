@@ -69,7 +69,10 @@ header {
 }
 
 .cta:hover {
-	background-color: hsl(12, 97%, 71%);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	transition: transform 0.4s ease-in-out;
+	background-color: hsl(12, 98%, 64%);
 }
 
 /********************************* INTRO SECTION *********************/
