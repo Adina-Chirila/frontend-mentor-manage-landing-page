@@ -13,7 +13,9 @@
 			src="https://kit.fontawesome.com/0f4ecf7998.js"
 			crossorigin="anonymous"
 		></script>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/glider.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="glider.min.js" defer></script>
 		<script src="script.js" defer></script>
 		<title>Frontend Mentor | Manage landing page</title>
 	</head>
@@ -113,9 +115,9 @@
 			</section>
 		</div>
 
-		<section class="testimonials-section">
+		<section class="testimonials-section glider-contain multiple">
 			<h3 class="heading">What they’ve said</h3>
-			<div class="testimonials-container">
+			<div class="testimonials-container glider">
 				<div class="testimonial">
 					<img src="./images/avatar-anisha.png" alt="anisha avatar" />
 					<p class="name">Anisha Li</p>
@@ -153,6 +155,7 @@
 					</p>
 				</div>
 			</div>
+			<div id="resp-dots" class="glider-dots"></div>
 			<button class="cta">Get Started</button>
 		</section>
 

@@ -9,7 +9,7 @@
 body {
 	font-family: "Be Vietnam", sans-serif;
 	background: no-repeat top -250px right -190px
-		url("./images/bg-tablet-pattern.svg");
+		url("../images/bg-tablet-pattern.svg");
 }
 
 .container {
@@ -17,6 +17,30 @@ body {
 	max-width: 900px;
 	margin: 0 auto;
 	position: relative;
+}
+
+/* Override glider settings*/
+.glider {
+	padding-top: 3em;
+}
+
+.glider-dot {
+	color: inherit;
+	border-radius: 999px;
+	border: 1px solid hsl(12, 88%, 59%);
+	background: inherit;
+	width: 12px;
+	height: 12px;
+	margin: 7px;
+}
+
+.glider-dot:focus,
+.glider-dot:hover {
+	background: white;
+}
+
+.glider-dot.active {
+	background: hsl(12, 88%, 59%);
 }
 
 /********************************* HEADER *********************/
@@ -116,7 +140,7 @@ header {
 .different::before {
 	position: absolute;
 	content: "";
-	background: url("./images/bg-tablet-pattern.svg") no-repeat;
+	background: url("../images/bg-tablet-pattern.svg") no-repeat;
 	background-size: 800px;
 	width: 820px;
 	height: 800px;
@@ -172,20 +196,22 @@ header {
 
 .testimonials-section {
 	text-align: center;
-	margin: 6em 0;
+	margin: 5em 0;
 	padding: 0 1em;
 }
 
+.testimonials-section .cta {
+	margin-top: 2em;
+}
+
 .testimonials-container {
-	margin: 5em 0 2em 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin-top: 5em;
 }
 
 .testimonial {
 	background-color: hsl(0, 0%, 98%);
 	position: relative;
+	padding: 0 1em 1em 1em;
 }
 
 .testimonial + .testimonial {
@@ -193,7 +219,7 @@ header {
 }
 
 .testimonial img {
-	width: 60px;
+	width: 70px;
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -212,7 +238,7 @@ header {
 
 /********************************* CTA SECTION *********************/
 .cta-banner {
-	background: left bottom url("./images/bg-simplify-section-desktop.svg");
+	background: left bottom url("../images/bg-simplify-section-desktop.svg");
 	background-color: hsl(12, 88%, 59%);
 }
 
@@ -370,6 +396,12 @@ footer {
 
 /****************************** MEDIA QUERIES ************************/
 
+@media only screen and (max-width: 700px) {
+	.testimonial + .testimonial {
+		margin-left: 0;
+	}
+}
+
 @media only screen and (max-width: 900px) {
 	.identity {
 		width: 100%;
@@ -471,16 +503,8 @@ footer {
 		margin-bottom: 3em;
 	}
 
-	.testimonials-container {
-		flex-direction: column;
-	}
-
-	.testimonial + .testimonial {
-		margin-left: 0;
-	}
-
-	.testimonial {
-		margin-bottom: 4em;
+	.testimonial img {
+		width: 80px;
 	}
 
 	.cta-container {
@@ -528,6 +552,7 @@ footer {
 	}
 }
 
+/* Animations */
 @-webkit-keyframes scale-in-center {
 	0% {
 		-webkit-transform: scale(0);
